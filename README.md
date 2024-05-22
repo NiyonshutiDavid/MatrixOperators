@@ -51,13 +51,13 @@ The script expects two input filenames as command-line arguments.
 
 ### Running the Script
 
-Navigate to the `MatricOperators` directory and run the script with the input filenames:
+Navigate to the `MatrixOperators` directory and run the script with the input filenames:
 ```bash
 cd MatrixOperators
 ```
 
 ```bash
-python3 matrixop.py sample1.txt sample2.txt
+python3 SparseMatrixOperators.py sample1.txt sample2.txt
 ```
 
 You will be prompted to select an operation:
@@ -113,7 +113,7 @@ Here’s an example session:
 2. Run the script:
 
     ```bash
-    python3 matrixop.py sample1.txt sample2.txt
+    python3 SparseMatrixOperators.py sample1.txt sample2.txt
     ```
 
 3. Select an operation:
@@ -135,6 +135,6 @@ Here’s an example session:
 
 ## Author
 
-This project was developed by [David Niyonshuti]. For more information, visit [NiyonshutiDavid](https://github.com/NiyonshutiDavid).
+This project was developed by `David Niyonshuti`. For more information, visit [NiyonshutiDavid](https://github.com/NiyonshutiDavid).
 
 This `README.md` provides a comprehensive overview of the project, including how to clone the repository, usage instructions, function descriptions, and author information.
