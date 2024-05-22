@@ -79,7 +79,7 @@ def main():
     input_dir = './sample_inputs/'
 
     if len(sys.argv) != 3:
-        print("Usage: python3 matrixop.py <inputfile1> <inputfile2>")
+        print("Usage: python3 SparseMatrixOperators.py <inputfile1> <inputfile2>")
         return
 
     file1 = sys.argv[1]
