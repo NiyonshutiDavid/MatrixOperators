@@ -60,13 +60,9 @@ cd MatrixOperators
 python3 SparseMatrixOperators.py sample1.txt sample2.txt
 ```
 
-You will be prompted to select an operation:
+You will be prompted to select an operation
+![image](https://github.com/NiyonshutiDavid/MatrixOperators/assets/144002340/7586c8c4-7387-4910-a457-e2ba76a7c1d5)
 
-```
-Select operation (add, subtract, multiply):
-```
-
-Enter `add`, `subtract`, or `multiply`.
 
 ### Output
 
