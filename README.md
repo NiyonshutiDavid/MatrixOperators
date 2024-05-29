@@ -125,7 +125,7 @@ Here’s an example session:
 4. The script will output:
 
     ```
-    Processed the result in 0.0123 seconds, saved in /output/sample1.txt&&sample2.txt_sum.txt
+    Processed the result in 0.0123 seconds, saved in /output/sample1.txt|adding|sample2.txt_sum.txt
     ```
 
 ## Notes
