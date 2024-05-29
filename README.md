@@ -61,16 +61,9 @@ python3 SparseMatrixOperators.py sample1.txt sample2.txt
 ```
 
 You will be prompted to select an operation
+
 ![image](https://github.com/NiyonshutiDavid/MatrixOperators/assets/144002340/7586c8c4-7387-4910-a457-e2ba76a7c1d5)
 
-
-### Output
-
-The result will be saved in the `output` directory with a filename based on the input filenames and the operation. For example:
-
-```
-Processed the result in 0.0123 seconds, saved in output/sample1.txt|adding|sample2.txt_sum.txt
-```
 
 ## Functions
 
