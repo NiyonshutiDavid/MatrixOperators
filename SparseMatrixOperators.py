@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+#SparseMatrixOperators.py performs different operators on two matrix files inputed by the user
 import os
 import sys
 import time
-
+#The start of the class Sparse matrix operator
 class SparseMatrix:
     def __init__(self, numRows, numCols):
         self.numRows = numRows
@@ -36,7 +37,7 @@ class SparseMatrix:
 
     def get_element(self, row, col):
         return self.elements.get((row, col), 0)
-
+#Function to perform addition of matrices
     def add(self, other):
         if self.numRows != other.numRows or self.numCols != other.numCols:
             raise ValueError("Matrix dimensions do not match for addition")
@@ -45,7 +46,7 @@ class SparseMatrix:
         for key in all_keys:
             result.set_element(key[0], key[1], self.get_element(key[0], key[1]) + other.get_element(key[0], key[1]))
         return result
-
+#Function to perform subtraction of matrices
     def subtract(self, other):
         if self.numRows != other.numRows or self.numCols != other.numCols:
             raise ValueError("Matrix dimensions do not match for subtraction")
@@ -54,7 +55,7 @@ class SparseMatrix:
         for key in all_keys:
             result.set_element(key[0], key[1], self.get_element(key[0], key[1]) - other.get_element(key[0], key[1]))
         return result
-
+#Function to perform multiplication of matrices using ROCO Method of multiplication of matrices
     def multiply(self, other):
         if self.numCols != other.numRows:
             raise ValueError("Matrix dimensions do not match for multiplication")
@@ -70,11 +71,11 @@ class SparseMatrix:
         for (row, col), value in sorted(self.elements.items()):
             result.append(f"({row}, {col}, {value})")
         return "\n".join(result)
-
+#Function to save the output
     def save_to_file(self, file_path):
         with open(file_path, 'w') as file:
             file.write(self.to_string())
-
+#The main function to run the app
 def main():
     input_dir = './sample_inputs/'
 
@@ -98,9 +99,9 @@ def main():
 
     matrix1 = SparseMatrix.from_file(file1_path)
     matrix2 = SparseMatrix.from_file(file2_path)
-
-    operation = input("Select operation (add, subtract, multiply): ").strip().lower()
-    
+#The message to the user
+    operation = input(f"\n\033[1m\033[32m-----** Successfully Entered In **-----\033[0m\n \n\033[1m\033[31m------SPARSE MATRIX OPERATOR------\033[0m\nPlease select operation to perform on your inputed files\033[31m:\033[0m \n \033[31m1.\033[0madd \n \033[31m2.\033[0msubtract\n \033[31m3.\033[0mmultiply \n\033[31m-->\033[33m Please Enter your operation as how it is displayed \033[31m:\033[0m ").strip().lower()
+#Calling function to count time of execution    
     start_time = time.time()
 
     if operation == 'add':
@@ -119,7 +120,7 @@ def main():
     end_time = time.time()
     elapsed_time = end_time - start_time
 
-    output_file = f"{file1}&&{file2}{op_suffix}.txt"
+    output_file = f"{file1}|{operation}ing|{file2}{op_suffix}.txt"
     output_dir = './output/'
     os.makedirs(output_dir, exist_ok=True)
     output_file_path = os.path.join(output_dir, output_file)
